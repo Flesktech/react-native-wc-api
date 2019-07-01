@@ -1,0 +1,75 @@
+{
+  "name": "react-native-wc-api",
+  "version": "1.0.0",
+  "description": "A wocommerce\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Do\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C Rest\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[W\u001b[C\u001b[C\u001b[C\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C Api wrapper for React Native",
+  "main": "lib/react-native-wc-api",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IntelliJAbhishek/react-native-wc-api.git"
+  },
+  "keywords": [
+    "woocommerce",
+    "react native",
+    "react",
+    "native",
+    "android",
+    "ios",
+    "mobile",
+    "woocom",
+    "wordpress",
+    "permalink",
+    "wordpress-permailink",
+    "wordpresspermailink",
+    "rest",
+    "REST",
+    "woocommerce-rest",
+    "woocommercerest",
+    "woocommerce-REST",
+    "wordpress-rest",
+    "wordpress-REST",
+    "wordpressrest",
+    "wordpressREST",
+    "wordpress-rest-api",
+    "wordpress-REST-api",
+    "wordpress-REST-API",
+    "wordpressrestapi",
+    "wordpressRESTapi",
+    "wordpressRESTAPI",
+    "woocommerce-api",
+    "woocommerceapi",
+    "woo",
+    "crystalwebpro",
+    "techneplus",
+    "api",
+    "API",
+    "wc",
+    "commerce",
+    "wordpress commerce",
+    "wordpress-commerce",
+    "wordpresscommerce",
+    "wordpress woocommerce",
+    "wordpress-woocommerce",
+    "wordpress-woocommerce-api",
+    "wordpress woocommerce api",
+    "wordpresswoocommerceapi",
+    "wordpress shopping cart",
+    "wordpress-shopping-cart",
+    "wordpressshoppingcart"
+  ],
+  "author": "Abhishek Singh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IntelliJAbhishek/react-native-wc-api/issues"
+  },
+  "homepage": "https://github.com/IntelliJAbhishek/react-native-wc-api#readme",
+  "dependencies": {
+    "oauth-1.0a": "^2.2.5",
+    "crypto-js": "^3.1.8"
+  }
+}
