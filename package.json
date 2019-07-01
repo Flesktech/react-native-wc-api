@@ -1,7 +1,7 @@
 {
   "name": "react-native-wc-api",
-  "version": "1.0.0",
-  "description": "A wocommerce\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Do\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C Rest\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[W\u001b[C\u001b[C\u001b[C\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C Api wrapper for React Native",
+  "version": "1.0.1",
+  "description": "A wocommerce Api wrapper for React Native",
   "main": "lib/react-native-wc-api",
   "directories": {
     "lib": "lib"
