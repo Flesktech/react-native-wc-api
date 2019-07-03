@@ -10,6 +10,12 @@ To install the module using NPM:
 npm install react-native-wc-api --save
 ```
 
+To install the module using Yarn:
+
+```
+yarn add react-native-wc-api
+```
+
 ## Setup
 
 You will need a consumer key and consumer secret to call your store's WooCommerce API. You can find instructions [here](https://docs.woocommerce.com/document/woocommerce-rest-api/)
