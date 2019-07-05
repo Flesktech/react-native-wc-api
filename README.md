@@ -2,20 +2,17 @@
 
 A React-Native wrapper for the WooCommerce REST API. Easily interact with the WooCommerce REST API using this library.
 
-[![build status](https://secure.travis-ci.org/woocommerce/wc-api-node.svg)](http://travis-ci.org/woocommerce/wc-api-node)
-[![dependency status](https://david-dm.org/woocommerce/wc-api-node.svg)](https://david-dm.org/woocommerce/wc-api-node)
-[![npm version](https://img.shields.io/npm/v/woocommerce-api.svg)](https://www.npmjs.com/package/woocommerce-api)
+[![dependency status](https://david-dm.org/IntelliJAbhishek/react-native-wc-api.svg)](https://david-dm.org/IntelliJAbhishek/react-native-wc-api)
+[![npm version](https://img.shields.io/npm/v/react-native-wc-api.svg)](https://www.npmjs.com/package/react-native-wc-api)
 
 ## Installation
 
 To install the module using NPM:
-
 ```
 npm install react-native-wc-api --save
 ```
 
 To install the module using Yarn:
-
 ```
 yarn add react-native-wc-api
 ```
@@ -97,10 +94,10 @@ const WooCommerce = new WooCommerceAPI({
 
 ### DELETE
 
-- `.delete(endpoint)``
+- `.delete(endpoint)`
 
 ### OPTIONS
 
 - `.options(endpoint)`
 
-** Example include [Here](https://github.com/IntelliJAbhishek/react-native-wc-api/tree/master/example)
+**Example include [Here](https://github.com/IntelliJAbhishek/react-native-wc-api/tree/master/example)**
