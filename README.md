@@ -1,6 +1,10 @@
-![GitHub package.json version](https://img.shields.io/github/package-json/v/intellijabhishek/react-native-wc-api.svg)
-# react-native-wc-api
-A wrapper that connects react Native to the WooCommerce API
+# WooCommerce API - React-Native Client
+
+A React-Native wrapper for the WooCommerce REST API. Easily interact with the WooCommerce REST API using this library.
+
+[![build status](https://secure.travis-ci.org/woocommerce/wc-api-node.svg)](http://travis-ci.org/woocommerce/wc-api-node)
+[![dependency status](https://david-dm.org/woocommerce/wc-api-node.svg)](https://david-dm.org/woocommerce/wc-api-node)
+[![npm version](https://img.shields.io/npm/v/woocommerce-api.svg)](https://www.npmjs.com/package/woocommerce-api)
 
 ## Installation
 
@@ -16,89 +20,87 @@ To install the module using Yarn:
 yarn add react-native-wc-api
 ```
 
+## Getting started
+
+Generate API credentials (Consumer Key & Consumer Secret) following this instructions <http://docs.woocommerce.com/document/woocommerce-rest-api/>
+.
+
+Check out the WooCommerce API endpoints and data that can be manipulated in <http://woocommerce.github.io/woocommerce-rest-api-docs/>.
+
 ## Setup
 
-You will need a consumer key and consumer secret to call your store's WooCommerce API. You can find instructions [here](https://docs.woocommerce.com/document/woocommerce-rest-api/)
-
-Include the 'react-native-wc-api' module within your script and instantiate it with a config:
+Setup for the new WP REST API integration (WooCommerce 2.6 or later):
 
 ```javascript
 import WooCommerceAPI from 'react-native-wc-api';
 
-let Api = new WooCommerceAPI({
-  url: 'https://yourstore.com', // Your store URL
-  ssl: true,
-  consumerKey: 'ck_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx', // Your consumer secret
-  consumerSecret: 'cs_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', // Your consumer secret
-  wpAPI: true, // Enable the WP REST API integration
-  version: 'wc/v2', // WooCommerce WP REST API version
-  queryStringAuth: true
+const WooCommerce = new WooCommerceAPI({
+  url: 'http://example.com',
+  consumerKey: 'ck_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+  consumerSecret: 'cs_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+  wpAPI: true,
+  version: 'wc/v1'
 });
 ```
 
+Setup for the old WooCommerce legacy API:
+
+```javascript
+import WooCommerceAPI from 'react-native-wc-api';
+
+const WooCommerce = new WooCommerceAPI({
+  url: 'http://example.com',
+  consumerKey: 'ck_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+  consumerSecret: 'cs_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+  version: 'v3'
+});
+```
+
+### Options
+
+|       Option      |    Type   | Required |                                               Description                                                |
+|-------------------|-----------|----------|----------------------------------------------------------------------------------------------------------|
+| `url`             | `String`  | yes      | Your Store URL, example: http://woo.dev/                                                                 |
+| `consumerKey`     | `String`  | yes      | Your API consumer key                                                                                    |
+| `consumerSecret`  | `String`  | yes      | Your API consumer secret                                                                                 |
+| `wpAPI`           | `Bool`    | no       | Allow requests to the WP REST API (WooCommerce 2.6 or later)                                             |
+| `wpAPIPrefix`     | `String`  | no       | Custom WP REST API URL prefix, used to support custom prefixes created with the `rest_url_prefix` filter |
+| `version`         | `String`  | no       | API version, default is `v3`                                                                             |
+| `verifySsl`       | `Bool`    | no       | Verify SSL when connect, use this option as `false` when need to test with self-signed certificates      |
+| `encoding`        | `String`  | no       | Encoding, default is 'utf-8'                                                                             |
+| `queryStringAuth` | `Bool`    | no       | When `true` and using under HTTPS force Basic Authentication as query string, default is `false`         |
+| `port`            | `string`  | no       | Provide support for URLs with ports, eg: `8080`                                                          |
+| `timeout`         | `Integer` | no       | Define the request timeout                                                                               |
+
+## Methods
+
+|   Params   |    Type    |                         Description                          |
+|------------|------------|--------------------------------------------------------------|
+| `endpoint` | `String`   | WooCommerce API endpoint, example: `customers` or `order/12` |
+| `data`     | `Object`   | JS object, will be converted to JSON                         |
+
+
+
 **Instantiating a WooCommerceAPI instance without a url, consumerKey or secret will result in an error being thrown**
-
-## Calling the API
-
-Your WooCommerce API can be called once the Api object has been instantiated (see above).
 
 ### GET
 
-```javascript
-Api.get('products',{
-    })
-    .then(data => {
-      // data will contain the body content from the request
-    })
-    .catch(error => {
-       // error will return any errors that occur
-    })
-```
-**Note:- Your can use either query params or query as object ([Check Example](https://github.com/IntelliJAbhishek/react-native-wc-api/tree/master/example))**
+- `.get(endpoint)`
 
 ### POST
 
-For this example you have a [Order object](http://woocommerce.github.io/woocommerce-rest-api-docs/#create-an-order).
-
-```javascript
-Api.post('orders', orderObject, {
-  })
-  .then(data => {
-   // data will contain the body content from the request
-  })
-  .catch(error => {
-      // error will return any errors that occur
-  })
-```
+- `.post(endpoint, data)`
 
 ### PUT
 
-```javascript
-WooCommerceAPI.put('/orders/1', orderUpdate, {
-  })
-  .then(data => {
-     // data will contain the body content from the request
-  })
-    .catch(error => {
-      // error will return any errors that occur
-  })
-```
+- `.put(endpoint, data)`
 
 ### DELETE
 
-```javascript
-NPMWooCommerceAPI.delete('orders/1234', {
-  })
-  .then(data => {
-   // data will contain the body content from the request
-  })
-  .catch(error => {
-  // error will return any errors that occur
-  })
-```
+- `.delete(endpoint)``
 
-## Testing
+### OPTIONS
 
-```
-npm test
-```
+- `.options(endpoint)`
+
+** Example include [Here](https://github.com/IntelliJAbhishek/react-native-wc-api/tree/master/example)

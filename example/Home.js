@@ -6,21 +6,49 @@ import Api from './Api';
 class Home extends React.PureComponent {
     constructor(props) {
         super(props);
-		
-        Api.get('customers', { per_page: 5 }).then((response) => {
+    }
+
+    componentWillMount() {
+        // GET example
+        WooCommerce.get('customers').then(response => {
             console.log(response);
         }).catch(error => {
             console.log(error);
         });
-		
-        Api.get('customers/?per_page=5').then((response) => {
+
+        // POST example
+        WooCommerce.post('products', {
+            product: {
+                title: 'Premium Quality',
+                type: 'simple',
+                regular_price: '21.99'
+            }
+        }).then(response => {
+            console.log(response);
+        }).catch(error => {
+            console.log(error);
+        });
+
+
+        // PUT example
+        WooCommerce.put('orders/123', {
+            status: 'completed'
+        }).then(response => {
+            console.log(response);
+        }).catch(error => {
+            console.log(error);
+        });
+
+        // Delete example
+        WooCommerce.delete('coupons/123').then(response => {
             console.log(response);
         }).catch(error => {
             console.log(error);
         });
     }
-	
-	render() {
-		return <View/>;
-	}
+
+
+    render() {
+        return <View />;
+    }
 }
