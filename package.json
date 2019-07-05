@@ -1,6 +1,6 @@
 {
   "name": "react-native-wc-api",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "A wocommerce Api wrapper for React Native",
   "main": "lib/react-native-wc-api",
   "directories": {
